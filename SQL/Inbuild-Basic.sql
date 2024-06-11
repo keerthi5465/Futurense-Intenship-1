@@ -1,7 +1,7 @@
 -- CHAR_LENGTH(str): Returns the number of characters in a strings
 SELECT CHAR_LENGTH('Hello World'); 
 
--- ASCII(str): Returns the ASCII value of the leftmost character of the string
+-- ASCII(str): Returns the ASCII value of the leftmost character of the strings
 SELECT ASCII('L'); 
 
 -- INSTR(str, substr): Returns the position of the first occurrence of substring within a string

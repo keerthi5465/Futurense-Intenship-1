@@ -1,4 +1,4 @@
--- CHAR_LENGTH(str): Returns the number of characters in a string
+-- CHAR_LENGTH(str): Returns the number of characters in a strings
 SELECT CHAR_LENGTH('Hello World'); 
 
 -- ASCII(str): Returns the ASCII value of the leftmost character of the string

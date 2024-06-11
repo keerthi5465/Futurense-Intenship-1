@@ -7,7 +7,7 @@ SELECT ASCII('L');
 -- INSTR(str, substr): Returns the position of the first occurrence of substring within a string
 SELECT INSTR('Hello World', 'World'); 
 
--- LCASE(str) or LOWER(str): Converts a string to lowercase
+-- LCASE(str) or LOWER(str): Converts a string to lowercasee
 SELECT LCASE('HELLO'); 
 
 -- UCASE(str) or UPPER(str): Converts a string to uppercase

@@ -9,7 +9,7 @@ function App() {
   async function generateAnswer() {
     setAnswer("Loading");
     const response = await axios({
-      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDxN6nbUdLn5_1nXaZa2d5LZG03L_r3PGI",
+      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}",
       method: "post",
       data: {"contents":[{"parts":[{"text":Question}]}]}
     });

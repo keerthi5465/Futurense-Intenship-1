@@ -31,7 +31,13 @@ Welcome to the project's progress tracker! This document outlines the milestones
 | 12/6   | Frontend Development                                                                                  | 🎨 Primary Components Done      |
 | 13/6   | Backend Development (continued)                                                                       | 🔄 In Progress                  |
 | 13/6   | Frontend Development (continued)                                                                      | 🔄 In Progress                  |
-
+| 13/6   | ChatBot- With a endpoint to show                                                                      | 🔄 In Progress                  |
+| 13/6   | Made a ChatBot usinf flaskAPI                                                                         | 🔄 In Progress                  |
+| 13/6   | Trying to integrate a cache memory to Bot                                                             | 🔄 In Progress                  |
+| 17/6   | DDL,DML(SQL)                                                                                          | ✅ Completed                    |
+| 17/6   | Operators                                                                                             | ✅ Completed                    |
+| 18/6   | DQL                                                                                                   | ✅ Completed                    |
+| 18/6   | Inbuilt Functions                                                                                     | ✅ Completed                    |
 ---
 
 ## 🌟 Highlights

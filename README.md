@@ -22,22 +22,24 @@ Welcome to the project's progress tracker! This document outlines the milestones
 | 10/6   | Learn Tuple                                                                                           | ✅ Completed                    |
 | 10/6   | Learn Dictionary                                                                                      | ✅ Completed                    |
 | 10/6   | Learn Sets                                                                                            | ✅ Completed                    |
-| 10/6   | Mini Project (Apna) - roles                                                                            | 🎉 Completed                    |
+| 10/6   | Mini Project (Apna) - roles                                                                           | 🎉 Completed                    |
 | 11/6   | Assistance in website architecture                                                                    | ✅ Completed                    |
 | 11/6   | Learn the assigned tech stack                                                                         | ✅ Completed                    |
 | 11/6   | Work on their repos                                                                                   | ✅ Completed                    |
-| 12/6   | Designing Key Pages: UI/UX                                                                             | 🎨 Dashboard Designing Done     |
+| 12/6   | Designing Key Pages: UI/UX                                                                            | 🎨 Dashboard Designing Done     |
 | 12/6   | Version Control for Team Project with integrating Frontend Tech Stacks                                | 📝 Done                        |
 | 12/6   | Frontend Development                                                                                  | 🎨 Primary Components Done      |
 | 13/6   | Backend Development (continued)                                                                       | 🔄 In Progress                  |
 | 13/6   | Frontend Development (continued)                                                                      | 🔄 In Progress                  |
-| 13/6   | ChatBot- With a endpoint to show                                                                      | 🔄 In Progress                  |
-| 13/6   | Made a ChatBot usinf flaskAPI                                                                         | 🔄 In Progress                  |
-| 13/6   | Trying to integrate a cache memory to Bot                                                             | 🔄 In Progress                  |
+| 14/6   | ChatBot- With a endpoint to show                                                                      | 🔄 In Progress                  |
+| 14/6   | Made a ChatBot usinf flaskAPI                                                                         | 🔄 In Progress                  |
+| 15/6   | Trying to integrate a cache memory to Bot                                                             | 🔄 In Progress                  |
 | 17/6   | DDL,DML(SQL)                                                                                          | ✅ Completed                    |
 | 17/6   | Operators                                                                                             | ✅ Completed                    |
 | 18/6   | DQL                                                                                                   | ✅ Completed                    |
 | 18/6   | Inbuilt Functions                                                                                     | ✅ Completed                    |
+| 19/6   | Joins                                                                                                 | ✅ Completed                    |
+| 19/6   | normalizations                                                                                        | ✅ Completed                    |
 ---
 
 ## 🌟 Highlights
@@ -48,6 +50,7 @@ Welcome to the project's progress tracker! This document outlines the milestones
 - **UI/UX Design**: Completed key pages design with a focus on user experience.
 - **Version Control**: Coordinated team projects with integrated frontend tech stacks.
 - **Comprehensive Learning**: Covered Python data structures including Lists, Tuples, Dictionaries, and Sets.
+- **Created a chatBot**: Integereated a Gemini - API and got hold on the AI which can make responses on promots.
 
 
 Let's continue the momentum! 🌟💪

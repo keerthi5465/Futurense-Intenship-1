@@ -1,54 +1,67 @@
-import { useState } from 'react';
+import { useState } from "react";
+import "./App.css";
 import axios from "axios";
+import ReactMarkdown from "react-markdown";
 
 function App() {
-  const [Question, setQuestion] = useState("");
-  const [Answer, setAnswer] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Track loading state
-
-  async function generateAnswer() {
-    setAnswer("Loading...");
-    setIsLoading(true);
-
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
+  const [generatingAnswer, setGeneratingAnswer] = useState(false);
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  async function generateAnswer(e) {
+    setGeneratingAnswer(true);
+    e.preventDefault();
+    setAnswer("Loading your answer... \n It might take upto 10 seconds");
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
+        url:`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
         method: "post",
-        data: { "contents": [{ "parts": [{ "text": Question }] }] }
+        data: {
+          contents: [{ parts: [{ text: question }] }],
+        },
       });
-      console.log("Response data:", response.data);
-      setAnswer(response.data.candidates[0].content.parts[0].text);
+
+      setAnswer(
+        response["data"]["candidates"][0]["content"]["parts"][0]["text"]
+      );
     } catch (error) {
-      console.error("Error fetching the answer:", error);
-      setAnswer("Error fetching the answer");
-    } finally {
-      setIsLoading(false);
+      console.log(error);
+      setAnswer("Sorry - Something went wrong. Please try again!");
     }
+
+    setGeneratingAnswer(false);
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Chat Bot</h1>
-      <textarea
-        className="border border-gray-300 rounded-lg p-2 w-full mb-4"
-        value={Question}
-        onChange={(e) => setQuestion(e.target.value)}
-        placeholder="Enter your question..."
-      ></textarea>
-      <button
-        className={`bg-blue-500 text-white px-4 py-2 rounded-lg ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
-        onClick={generateAnswer}
-        disabled={isLoading}
-      >
-        {isLoading ? 'Loading...' : 'Answer'}
-      </button>
-      {Answer && (
-        <div className="mt-4">
-          <strong>Response:</strong>
-          <pre className="border border-gray-300 rounded-lg p-2 mt-2">{Answer}</pre>
+    <>
+      <div className="bg-black h-screen p-3">
+        <form
+          onSubmit={generateAnswer}
+          className="w-full md:w-2/3 m-auto text-center rounded bg-black-50 py-2"
+        >
+          <a href="" target="_blank">
+            <h1 className="text-3xl text-center">Chat AI</h1>
+          </a>
+          <textarea
+            required
+            className="border rounded w-11/12 my-2 min-h-fit p-3"
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            placeholder="Ask anything"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-blue-300 p-3 rounded-md hover:bg-blue-400 transition-all duration-300"
+            disabled={generatingAnswer}
+          >
+            Generate answer
+          </button>
+        </form>
+        <div className="w-full md:w-2/3 m-auto text-center rounded bg-gray-50 my-1">
+          <ReactMarkdown className="p-3">{answer}</ReactMarkdown>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 }
 
